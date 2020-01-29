@@ -1,0 +1,31 @@
+
+
+{% load static %}
+
+<html>
+
+<head>
+<link href="{% static 'cool.css' %}" rel="stylesheet">
+</head>
+<body>
+<div>
+</div>
+</body>
+</html>
+
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="id_subject">Subject</label>
+      <br>
+      <input type="text" class="form-control" id="id_subject" name="subject">
+    </div>
+
+    <div class="form-group">
+      <label for="id_message">Message</label>
+      <br>
+      <textarea class="form-control" id="id_message" name="message" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Post</button>
+  </form>
